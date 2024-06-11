@@ -1,0 +1,24 @@
+<div class="p-8">
+    <form [formGroup]="eForm" class="p-5 shadow-md">
+        <p class="font-bold">Agregar Nuevo Empleado</p>
+        <div class="m-4">
+            <p class="p-2">Nombre</p>
+            <input class="rounded border border-gray-300" type="text" id="name" formControlName="name">
+            <p class="p-2">Apellido</p>
+            <input class="rounded border border-gray-300" type="text" id="surname" formControlName="surname">
+            <p class="p-2">Puesto</p>
+            <input class="rounded border border-gray-300" type="text" id="job" formControlName="job">
+            <p class="p-2">Teléfono</p>
+            <input class="rounded border border-gray-300" type="text" id="tlf" formControlName="tlf">
+          <br/>
+          <div class="p-2">
+          <label><input type="checkbox" id="remote" value="remote" />Trabaja de forma remota</label>
+          </div>  
+          <div>
+                <button (click)="submit()" [disabled]="!eForm.valid"
+                    class="disabled:bg-slate-400 text-teal-50 black bg-black p-3 rounded-xl"
+                    type="button">Agregar Empleado</button>
+            </div>
+        </div>
+    </form>
+</div>
